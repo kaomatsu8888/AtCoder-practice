@@ -61,16 +61,17 @@
 
 def main():
     numbers = []
+    print(numbers)
 
     while True:
         # 整数を一つずつ標準入力から読み込む
         number = int(input())
-        
         # 読み込んだ整数をリストに追加
         numbers.append(number)
-        
+        print(numbers)
         # 0 が入力されたら読み込みを終了
         if number == 0:
+            print("break")
             break
     
     # リストの内容を逆順にして出力
