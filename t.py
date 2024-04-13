@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from module import *  # モジュールの全ての関数をインポート
 def greet(name):
     print(f"Hello, {name}!")
@@ -19,3 +20,12 @@ print(fruits)  # {'banana', 'apple', 'orange'}
 number = {'one': 1, 'two': 2}
 for k, v in number.items():
     print(k, v)
+=======
+import argparse  # argparseの機能は、コマンドライン引数を解析することです。
+
+parser = argparse.ArgumentParser()  # ArgumentParser オブジェクトを作成
+parser.add_argument("--command")  # 引数を追加
+parser.add_argument("target", nagrgs="+")  # 引数を追加
+args = parser.parse_args()  # 引数を解析
+print(args)
+>>>>>>> ddd754d7fc76328ac3ccf8b01067b889903b5039
