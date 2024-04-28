@@ -1,0 +1,9 @@
+日付　2020/12/29
+影響するPythonファイル名　pg38_01.py
+該当ページ P214
+書籍での記述 pip3 install googletrans 
+↓以下のように入力してください。
+pip3 install googletrans==4.0.0-rc1
+
+変更の原因:Google Translateの仕様変更によるものと思われます。
+

@@ -1,0 +1,7 @@
+ソースコード変更履歴
+変更日　2020/8/19
+ファイル名　（旧）pg34_01.py -> （新）pg34_01v2.py
+変更箇所 15行目
+変更内容 Amazonの仕様変更により、プログラムをロボットと認識され、データを取得できなくなったので以下のコードに変更しています。
+       html_contents = requests.get(url,headers = {'User-agent': 'Mozilla/5.0'}).text 
+	headers = {'User-agent': 'Mozilla/5.0'}のコードを追加しました。

@@ -1,0 +1,20 @@
+ソースコード変更履歴
+更新日　2020/12/2
+ファイル名　（旧）pg11_01.py -> （新）pg11_01V2.py
+変更箇所 15行目
+変更内容 環境によってはファイルを追加モードで書き出しできない現象が出るため修正いたしました。
+修正箇所のコードは以下のとおりです。
+with pd.ExcelWriter("店舗別売上リスト.xlsx",date_format='YYYY/MM/DD',engine="openpyxl",datetime_format='YYYY/MM/DD',mode = "a") as writer: 
+
+変更日　2020/9/6
+ファイル名　（旧）pg10_02.py -> （新）pg10_02v2.py
+変更箇所 22行目〜28行目
+変更内容 読者様からのご指摘で、貼り付けセル位置の指定に不具合が判明し、修正いたしました。
+修正箇所のコードは以下のとおりです。
+    wrow = 0 #貼り付け行位置計算用の変数
+    for i in range(fromStartCell[0],fromEndCell[0]+1): #行ループ
+        wcol = 0 #貼り付け列位置計算用の変数
+        for j in range(fromStartCell[1],fromEndCell[1]+1): #列ループ
+            workSheet.cell(row = toCell[0] + wrow, column = toCell[1] + wcol).value = workSheet.cell(row = i, column = j).value
+            wcol = wcol + 1
+        wrow = wrow + 1
