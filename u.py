@@ -1,4 +1,8 @@
-for i in range(1000000):
-# ７の倍数の時だけ処理を行う
-    if i % 7 == 0:
-        print(i)
+m , d = input().split() 
+
+if m == d or m[0] == d[0]:
+    print("True")
+else:
+    print("False")
+
+
